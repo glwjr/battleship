@@ -4,10 +4,10 @@ const Ship = (type, length) => {
   const getType = () => type;
   const getLength = () => length;
 
-  const setPosition = (indexArray) => {
+  const setPosition = (array) => {
     for (let i = 0; i < position.length; i += 1) {
       if (position[i] === '') {
-        position[i] = indexArray[i];
+        position[i] = array[i];
       }
     }
   };
