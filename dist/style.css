@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+#content {
+    text-align: center;
+}
+
+#header {
+    margin-top: 3rem;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid red;
+}
+
+#message {
+    height: 3rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border: 1px solid red;
+}
+
+#game-containers {
+    display: flex;
+    margin: 1rem auto;
+    width: min-content;
+}
+
+#user-container,
+#computer-container {
+    display: grid;
+    margin: 2rem;
+    width: 30rem;
+    height: 30rem;
+    cursor: pointer;
+}
+
+.cell {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.carrier {
+    background-color: blue;
+}
+
+.battleship {
+    background-color: green;
+}
+
+.cruiser {
+    background-color: purple;
+}
+
+.submarine {
+    background-color: orange;
+}
+
+.destroyer {
+    background-color: orchid;
+}
+
+.miss {
+    background-color: black;
+}
+
+.hit {
+    background-color: red;
+}
+
+#play-button {
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border: 1px solid red;
+}
+
+@media screen and (max-width: 750px) {
+    #game-containers {
+        display: block;
+    }
+}
