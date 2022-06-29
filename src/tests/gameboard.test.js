@@ -5,10 +5,10 @@ test('testing gameboard factory', () => {
   // Given a new Gameboard and mock indexes
   const playerboard = Gameboard();
   const carrierIndexes = [9, 10, 11, 12, 13];
-  const battleshipIndexes = [29, 39, 49, 59, 69];
+  const battleshipIndexes = [29, 30, 31, 32, 33];
   const cruiserIndexes = [19, 20, 21];
-  const submarineIndexes = [0, 1, 2];
-  const destroyerIndexes = [50, 51];
+  const submarineIndexes = [39, 40, 41];
+  const destroyerIndexes = [49, 50];
 
   // When the index arrays are used to place the ship
   playerboard.placeShip(playerboard.carrier, carrierIndexes);
@@ -20,6 +20,12 @@ test('testing gameboard factory', () => {
   // Then the position array should equal the original array
   expect(playerboard.carrier.position).toEqual([9, 10, 11, 12, 13]);
   expect(playerboard.cruiser.position).toEqual([19, 20, 21]);
+
+  //// When ships are placed randomly
+  //playerboard.placeShipRandomly(playerboard.battleship);
+
+  //// The moves should be legal
+  //expect(playerboard.board[]).toEqual('battleship');
 
   // The board should recognize what type of ship was placed
   expect(playerboard.board[19]).toEqual('cruiser');
