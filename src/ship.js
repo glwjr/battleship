@@ -19,10 +19,12 @@ const Ship = (type, length) => {
     }
   };
 
+  const isPlaced = () => position.every((value) => value !== '');
+
   const isSunk = () => position.every((value) => value === 'hit');
 
   return {
-    position, getType, getLength, setPosition, hit, isSunk,
+    position, getType, getLength, setPosition, hit, isSunk, isPlaced,
   };
 };
 
